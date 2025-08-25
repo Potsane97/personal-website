@@ -179,3 +179,47 @@ body.dark { --bg-color:#121212; --text-color:#eee; --primary-color:#90caf9; --ac
 .contact-links a:hover {
   background: var(--secondary-color);
 }
+
+/* --------------------------- */
+/* Responsive Navbar */
+/* --------------------------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--nav-bg);
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .navbar ul li {
+    margin: 15px 0;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
